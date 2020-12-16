@@ -14,24 +14,31 @@ int main()
     // Print a message at startup.
 
     // Create vendingMachine object. Constructor will be called with no parameters.
-    VendingMachine vendingMachine;
+    VendingMachine vendingMachine("Tarjei");
     // Print inventory using public printInventory member function (method).
     vendingMachine.printInventory();
 
 
     // Create a cola object. Constructor will be called with given parameters.
-    Soda cola("Colabrus", 34, 4);
+    Soda cola("Coca Cola", 34, 4);
     // We have a variable named cola with Soda as its data type.
+
+    Soda fanta("Fanta", 33, 10);
+    Soda vann("Bonaqua", 25, 20);
 
     // Call the VendingMachine addType function with cola variable as parameter.
     vendingMachine.addType(cola);
+    vendingMachine.addType(fanta);
+    vendingMachine.addType(vann);
     // Print inventory using public printInventory member function (method).
     vendingMachine.printInventory();
+
+    vendingMachine.printMenu();
 
 
 
     // Print a message just before exiting.
-    std::cout << "* * *" << std::endl;
+    std::cout << "\n* * *" << std::endl;
     std::cout << "Vending machine shutting down ... BYE!" << std::endl << std::endl;
 
 
