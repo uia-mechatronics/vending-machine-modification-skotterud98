@@ -38,6 +38,13 @@ void VendingMachine::printMenu()
 
     for (uint8_t i = 0; i < sodaTypes_.size(); i++)
     {
-        std::cout << sodaTypes_.operator[](i).name_ << std::endl;
+        //Printing name
+        std::cout << sodaTypes_.operator[](i).name_ << "\t\t";
+
+        //Printing price
+        std::cout << sodaTypes_.operator[](i).price_ << " kr" << "\t\t";
+
+        //Printing inventory
+        std::cout << "Inventory: " << sodaTypes_.operator[](i).inventory_ << std::endl;
     }
 }
